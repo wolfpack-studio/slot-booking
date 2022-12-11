@@ -9,6 +9,9 @@ from django.utils.timezone import make_aware
 
 # tzoffset from tz
 def get_utcoffset_minutes(tz):
+    """  get offset of a timezone:
+        tz: timezone
+        """
     now = datetime.now(pytz.timezone(tz))
     utcoffset = int(now.utcoffset().total_seconds()/60)
     if "-" in str(utcoffset):
@@ -17,22 +20,31 @@ def get_utcoffset_minutes(tz):
         return ('positive', int(utcoffset))
 
 
+# get timezone difference
+def tz_utcoffset_diff(base_tz, to_tz):
+    """ get defference between two timezones in hours:
+        base_tz: first timezone argument
+        to_tz: second timezome argument for difference
+        """
+    dt = datetime.now()
+    base_utcoff, to_utcoff = dt.astimezone(ZoneInfo(base_tz)).utcoffset(), dt.astimezone(ZoneInfo(to_tz)).utcoffset()
+    diff = int((to_utcoff-base_utcoff).total_seconds()/60)
+    if "-" in str(diff):
+        return ('negative', int(str(diff).replace("-","")))
+    else:
+        return ('positive', int(diff))
 
-# def tz_utcoffset_diff(base_tz, to_tz):
-#     dt = datetime.now()
-#     base_utcoff, to_utcoff = dt.astimezone(ZoneInfo(base_tz)).utcoffset(), dt.astimezone(ZoneInfo(to_tz)).utcoffset()
-#     diff = int((to_utcoff-base_utcoff).total_seconds()/60)
-#     if "-" in str(diff):
-#         return ('negative', int(str(diff).replace("-","")))
-#     else:
-#         return ('positive', int(diff))
 
 
 
 
-
-
+# Convert weekdays into date attached timestamp/timeslot
 def convert_wday_timestamp_slot(slot, offset_diff_minutes):
+    """
+    Convert weekdays into date attached timestamp/timeslot:
+        slot: tuple(from_time, to_time),
+        offset_diff_minnutes: offset difference in minutes
+        """
     from_time, to_time, weekday = slot
     weekday_date  = 0
     counter = 0
@@ -70,8 +82,12 @@ def convert_wday_timestamp_slot(slot, offset_diff_minutes):
 
 
 
-
+# Convert datetime stamp to difference timezone
 def convert_date_timestamp_slot(slots, to_timezone):
+    """Convert datetime stamp to difference timezones
+        slots: list of tuples -> [(from_time, to_time),(from_time, to_time),(from_time, to_time)],
+        to_timezone: target timezone name -> example: "utc" or "Asia/Kolkata"
+    """
     new_slots = {}
     for i in slots:
         ft = make_aware(datetime.combine(datetime.strptime(i[2],"%Y-%m-%d").date(),datetime.strptime(i[0],"%H:%M").time()), timezone=pytz.timezone(i[3]))
@@ -107,8 +123,14 @@ def convert_date_timestamp_slot(slots, to_timezone):
 
 
 
-
+# Slot validation
 def validate_slots_for_a_date(date, booked_slots, available_slots):
+    """
+    Function to validate slots
+    date: date object,
+    booked_slots: booked slots for specific date -> [(from_time, to_time),(from_time, to_time),(from_time, to_time),(from_time, to_time)]
+    available_slots: available slots for validation -> [(from_time, to_time),(from_time, to_time),(from_time, to_time),(from_time, to_time)]
+    """
     bs_list = []
     as_list = []
     rs_list = []
