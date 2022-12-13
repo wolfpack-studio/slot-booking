@@ -34,7 +34,26 @@ Convert datetime stamp to difference timezone.
 ##### `convert_date_timestamp_slot(slots, to_timezone)`
 <br>
 
+
 #### validate_slots_for_a_date()
 Slot validation
 ##### `validate_slots_for_a_date(date, booked_slots, available_slots)`
 <br>
+
+
+
+
+## Contributing
+
+We love your contributions and do our best to provide you with mentorship and support.  
+If nothing grabs your attention, check or come up with your feature. Just drop us a line or  and we’ll work out how to handle it.
+
+
+## Your feedback
+
+Did you use Bookit?
+Share your feedback and help us grow. It will take just a minute, but mean a lot!
+
+#### Crafted by [Wolves](https://wolfpackdigi.com/) 
+
+
