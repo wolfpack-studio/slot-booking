@@ -1,4 +1,4 @@
-## Bookit
+## Calendar Slot Booking
 Bookit is a calendar slot booking python module that helps developers building real-time slot booking easy with timezone compatibility.
 Bookit provides functions to make it possible.
 
