@@ -1,37 +1,40 @@
 ## Bookit
-
-
-
-### Description
-
 Bookit is a calendar slot booking python module that helps developers building real-time slot booking easy with timezone compatibility.
 Bookit provides functions to make it possible.
 
+### Features
+- **Offset based conversion**: Convert timestamp with offset
+- **Flexible output**: Validation functions return output in tuple and lists which makes it really flexible to work with.
+- **Timezone compatibility**: Validate slots accross different timezones
+- **Date Overrides**: Helps us to build easy date override functionality 
+- **Function Doc**: Access the intitutive doc with .__doc__
 
+
+<br>
 
 ### Usage.
 
 #### get_utcoffset_minutes()
 Helps us to get offsets of a specific timezone.
 ##### `get_utcoffset_minutes(tz)`
-
+<br>
 
 #### tz_utcoffset_diff()
 Gives us defference between two timezones in hours.
 ##### `tz_utcoffset_diff(tz1, tz2)`
-
+<br>
 
 #### convert_wday_timestamp_slot()
 Convert weekdays into date attached timestamp/timeslot
 ##### `convert_wday_timestamp_slot(slot, offset_diff_minutes)`
-
+<br>
 
 #### convert_date_timestamp_slot()
 Convert datetime stamp to difference timezone.
 ##### `convert_date_timestamp_slot(slots, to_timezone)`
-
+<br>
 
 #### validate_slots_for_a_date()
 Slot validation
 ##### `validate_slots_for_a_date(date, booked_slots, available_slots)`
-
+<br>
