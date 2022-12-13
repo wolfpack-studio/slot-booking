@@ -12,7 +12,7 @@ Bookit provides functions to make it possible.
 
 <br>
 
-### Usage.
+## Usage.
 
 #### get_utcoffset_minutes()
 Helps us to get offsets of a specific timezone.
