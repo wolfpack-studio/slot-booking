@@ -5,7 +5,7 @@ Bookit provides functions to make it possible.
 ### Features
 - **Offset based conversion**: Convert timestamp with offset
 - **Flexible output**: Validation functions return output in tuple and lists which makes it really flexible to work with.
-- **Timezone compatibility**: Validate slots accross different timezones
+- **Timezone compatibility**: Validate slots across different timezones
 - **Date Overrides**: Helps us to build easy date override functionality 
 - **Function Doc**: Access the intitutive doc with .__doc__
 
