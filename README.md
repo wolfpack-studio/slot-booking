@@ -1,5 +1,5 @@
 ## Calendar Slot Booking
-A Light wieght calendar slot booking python module to build real-time slot booking with timezone compatibility.
+A light wieght calendar slot booking python module to build real-time slot booking with timezone compatibility.
 
 ### Features
 - **Offset based conversion**: Convert timestamp with offset
