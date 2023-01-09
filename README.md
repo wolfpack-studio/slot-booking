@@ -11,7 +11,7 @@ A Light wieght calendar slot booking python module to build real-time slot booki
 
 <br>
 
-## Usage.
+## Usage
 
 #### get_utcoffset_minutes()
 Helps us to get offsets of a specific timezone.
@@ -45,12 +45,12 @@ Slot validation
 ## Contributing
 
 We love your contributions and do our best to provide you with mentorship and support.  
-If nothing grabs your attention, check or come up with your feature. Just drop us a line or  and we’ll work out how to handle it.
+If nothing grabs your attention, check or come up with your feature. Just drop us a line or and we’ll work out how to handle it.
 
 
 ## Your feedback
 
-Did you use Bookit?
+Did you use Calendar Slot Boolikg module?
 Share your feedback and help us grow. It will take just a minute, but mean a lot!
 
 #### Crafted by [Wolves](https://wolfpackdigi.com/) 
