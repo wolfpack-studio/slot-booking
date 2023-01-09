@@ -50,7 +50,7 @@ If nothing grabs your attention, check or come up with your feature. Just drop u
 
 ## Your feedback
 
-Did you use Calendar Slot Boolikg module?
+Did you use Calendar Slot Booking module?
 Share your feedback and help us grow. It will take just a minute, but mean a lot!
 
 #### Crafted by [Wolves](https://wolfpackdigi.com/) 
